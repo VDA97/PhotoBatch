@@ -5,7 +5,7 @@ OPT=-O0
 WARN=-Wall
 CCFLAGS=$(DEBUG) $(OPT) $(WARN)
 LD=g++
-OBJS= main.o argumentparser.o
+OBJS= main.o argumentparser.o utils.o 
 all: $(OBJS)
 	$(LD) -o $(TARGET) $(OBJS) 
  
@@ -14,6 +14,9 @@ main.o: main.cpp
 
 argumentparser.o: ArgumentParser.cpp
 	$(CC) -c $(CCFLAGS) ArgumentParser.cpp -o argumentparser.o
+
+utils.o: Utils.cpp
+	$(CC) -c $(CCFLAGS) Utils.cpp -o utils.o 
 
 clean:
 	@rm -f *.o

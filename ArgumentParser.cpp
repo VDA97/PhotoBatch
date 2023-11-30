@@ -1,16 +1,17 @@
 #include "ArgumentParser.h"
-#include <algorithm>
-
-std::string ToLower(std::string str) {
-  std::transform(std::begin(str), std::end(str), std::begin(str),
-                 [](unsigned char c) { return std::tolower(c); });
-  return str;
-}
+#include "Utils.h"
 
 void ArgumentParser::RegisterFlag(const std::string &flag) {
 
   if (!flag.empty()) {
     m_Flags[flag] = false;
+  }
+}
+
+void ArgumentParser::RegisterOption(const std::string &option) {
+
+  if (!option.empty()) {
+    m_Options[option] = "";
   }
 }
 
@@ -25,17 +26,56 @@ bool ArgumentParser::GetFlag(const std::string &flag) const {
   return false;
 }
 
+const std::string &ArgumentParser::GetOption(const std::string &option) const {
+  if (!option.empty()) {
+    auto optionIt = m_Options.find(option);
+    if (optionIt != std::end(m_Options)) {
+      return optionIt->second;
+    }
+  }
+  static std::string EmptyOption = "";
+  return EmptyOption;
+}
+
+float ArgumentParser::GetOptionAsFloat(const std::string &option) const {
+  const std::string &optionValue = GetOption(option);
+  if (!optionValue.empty()) {
+    return std::stof(optionValue);
+  }
+  return -1;
+}
+
+int ArgumentParser::GetOptionAsInt(const std::string &option) const {
+  const std::string &optionValue = GetOption(option);
+  if (!optionValue.empty()) {
+    return std::stoi(optionValue);
+  }
+  return -1;
+}
+
 void ArgumentParser::Parse(int argc, char *argv[]) {
   if (argc > 1) {
     for (int i = 1; i < argc; ++i) {
 
-      std::string arg = ToLower(argv[i]);
+      std::string arg = Utils::ToLower(argv[i]);
       // Argumentos que ter pelo menos 3 caracters, --n
       if (arg.length() >= 3) {
         if (arg[0] == '-' && arg[1] == '-') {
           //--rename, remove o sufixo --
           arg = arg.substr(2);
           if (arg.find_first_of('=') != std::string::npos) {
+            // isso é uma opção
+            const size_t equalSignPos = arg.find('=');
+            if (equalSignPos != std::string::npos) {
+              // Dividir a opção em chave e valor
+              std::string optionName = arg.substr(0, equalSignPos);
+              std::string optionValue = arg.substr(equalSignPos + 1);
+              auto optionIt = m_Options.find(optionName);
+              if (optionIt != std::end(m_Options)) {
+                // Achamos uma opção registrada
+                optionIt->second = optionValue;
+              }
+            }
 
           } else {
             // é uma flag

@@ -21,9 +21,12 @@ int main(int argc, char *argv[]) {
   std::cout << std::boolalpha << "Resize  :" << argParser.GetFlag("resize") << std::endl;
   std::cout << std::boolalpha << "Scale   :" << argParser.GetFlag("scale") << std::endl;
   std::cout << std::boolalpha << "Empty   :" << argParser.GetFlag("empty") << std::endl;
-  std::cout << "Folder   :" << argParser.GetOption("folder") << std::endl;
-  std::cout << "Amount (float)   :" << argParser.GetOptionAsFloat("amount") << std::endl;
-  std::cout << "Amount (int)   :" << argParser.GetOptionAsInt("amount") << std::endl;
+  int i{2};
+  float f{3.2};
+  std::cout << "Folder   :" << argParser.GetOptionAs(i, "folder") << std::endl;
+  std::cout << "Folder   :" << argParser.GetOptionAs(f, "folder") << std::endl;
+  // std::cout << "Amount (float)   :" << argParser.GetOptionAsFloat("amount") << std::endl;
+  // std::cout << "Amount (int)   :" << argParser.GetOptionAsInt("amount") << std::endl;
   // std::cout << "Amount   :" << argParser.GetOption("amount") << std::endl;
   // std::cout << "Amount   :" << argParser.GetOption("amount") << std::endl;
 

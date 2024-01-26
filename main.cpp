@@ -22,9 +22,19 @@ static constexpr const char *Filter = "filter";
 static constexpr const char *Width = "width";
 static constexpr const char *Height = "height";
 static constexpr const char *Amount = "amount";
+static constexpr const char *Prefix = "prefix";
+static constexpr const char *StartNumber = "startnumber";
 } // namespace Options
 } // namespace Args
 
+const std::string &GetInvalidChars() {
+  static const std::string invalidCharacters = "\\/*\"?<>|"; // Escapar \ para construir esse tipo de string
+  return invalidCharacters;
+}
+bool HasInvalidChars(const std::string &str) {
+  const bool bHasInvalidChars = str.find_first_of(GetInvalidChars()) != std::string::npos;
+  return bHasInvalidChars;
+}
 void ValidateArguments(const ArgumentParser &argParser) {
   // Ler as flags que o ArgumentParser identificou
   const bool bRenameMood = argParser.GetFlag(Args::Flags::Rename);
@@ -53,11 +63,8 @@ void ValidateArguments(const ArgumentParser &argParser) {
   }
   // validar se o filtro é um string valida
   const std::string filter = argParser.GetOption(Args::Options::Filter);
-  if (!filter.empty()) {
-    const std::string invalidCharacters = "\\/*\"?<>|"; // Escapar \ para construir esse tipo de string
-    if (filter.find_first_of(invalidCharacters) != std::string::npos) {
-      throw std::invalid_argument("O filtro não pode conter " + invalidCharacters);
-    }
+  if (!filter.empty() && HasInvalidChars(filter)) {
+    throw std::invalid_argument("O filtro não pode conter " + GetInvalidChars());
   }
   // Validar o modo Resize
   if (bResizeMood) {
@@ -94,6 +101,22 @@ void ValidateArguments(const ArgumentParser &argParser) {
       throw std::invalid_argument("Filter não pode estar em branco no modo Scale");
     }
   }
+  if (bRenameMood) {
+    int s{0}, startNumber = 0;
+    try {
+      startNumber = argParser.GetOptionAs(s, Args::Options::StartNumber);
+    } catch (const std::exception &e) {
+      throw std::invalid_argument("StartNumber deve ser um número válido");
+    }
+
+    std::string prefix = argParser.GetOption(Args::Options::Prefix);
+    if (startNumber < 0) {
+      throw std::invalid_argument("Start number deve ser igual ou maior que 0");
+    }
+    if (prefix.empty() || HasInvalidChars(prefix)) {
+      throw std::invalid_argument("Prefixo não pode estar em branco e não pode conter os caracteres: " + GetInvalidChars());
+    }
+  }
 };
 
 int main(int argc, char *argv[]) {
@@ -108,6 +131,8 @@ int main(int argc, char *argv[]) {
   argParser.RegisterOption(Args::Options::Filter);
   argParser.RegisterOption(Args::Options::Height);
   argParser.RegisterOption(Args::Options::Amount);
+  argParser.RegisterOption(Args::Options::Prefix);
+  argParser.RegisterOption(Args::Options::StartNumber);
 
   argParser.Parse(argc, argv);
 

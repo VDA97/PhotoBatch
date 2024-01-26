@@ -25,10 +25,10 @@ public:
   template <typename T>
   T GetOptionAs(T type, const std::string &option) const {
     if ((typeid(type)) == (typeid(int))) {
-      std::cout << "Returning as int: " << option << std::endl;
+      // std::cout << "Returning as int: " << option << std::endl;
       return GetOptionAsInt(option);
     } else if ((typeid(type)) == (typeid(float))) {
-      std::cout << "Returning as Float :" << option << std::endl;
+      //   std::cout << "Returning as Float :" << option << std::endl;
       return GetOptionAsFloat(option);
     } else {
       return -1;

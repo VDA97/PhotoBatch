@@ -21,6 +21,7 @@ static constexpr const char *Folder = "folder";
 static constexpr const char *Filter = "filter";
 static constexpr const char *Width = "width";
 static constexpr const char *Height = "height";
+static constexpr const char *Amount = "amount";
 } // namespace Options
 } // namespace Args
 
@@ -77,6 +78,22 @@ void ValidateArguments(const ArgumentParser &argParser) {
       throw std::invalid_argument("Filter não pode estar em branco no modo Resize");
     }
   }
+
+  if (bScaleMood) {
+    float a{0.0f}; // todo refactor this future, because, this is just for GetOptionAs calls GetOptionAsFloat
+    float amount{0.0f};
+    try {
+      amount = argParser.GetOptionAs(a, Args::Options::Amount);
+    } catch (const std::exception &e) {
+      throw std::invalid_argument("Valor de amount não é um número válido");
+    }
+    if (amount <= 0.0f) {
+      throw std::invalid_argument("Valor de amount não pode ser menor ou igual a 0.0");
+    }
+    if (filter.empty()) {
+      throw std::invalid_argument("Filter não pode estar em branco no modo Scale");
+    }
+  }
 };
 
 int main(int argc, char *argv[]) {
@@ -90,7 +107,7 @@ int main(int argc, char *argv[]) {
   argParser.RegisterOption(Args::Options::Folder);
   argParser.RegisterOption(Args::Options::Filter);
   argParser.RegisterOption(Args::Options::Height);
-  argParser.RegisterOption(Args::Options::Width);
+  argParser.RegisterOption(Args::Options::Amount);
 
   argParser.Parse(argc, argv);
 

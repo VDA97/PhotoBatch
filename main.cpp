@@ -1,9 +1,9 @@
+#include "ArgumentParser.h"
 #include <algorithm> //It is need for using std::count.
 #include <array>
+#include <filesystem> //substitui o <dirent.h> usando no linux para verificar pastas do pc local
 #include <iomanip>
 #include <iostream>
-
-#include "ArgumentParser.h"
 
 // So, for avoiding typing errors, is highly recommended to organize the string arguments.
 // This project will organize this string arguments using namespaces.
@@ -15,6 +15,11 @@ static constexpr const char *Convert = "convert";
 static constexpr const char *Resize = "resize";
 static constexpr const char *Scale = "scale";
 } // namespace Flags
+
+namespace Options {
+static constexpr const char *Folder = "folder";
+static constexpr const char *Filter = "filter";
+} // namespace Options
 } // namespace Args
 
 void ValidateArguments(const ArgumentParser &argParser) {
@@ -32,6 +37,25 @@ void ValidateArguments(const ArgumentParser &argParser) {
     // Se houver mais de um modo ativo, lança uma excessão
     throw std::invalid_argument("Somente um modo pode estar ativo");
   }
+  // Verificar se o caminho da pasta é valido, opção folder
+  const std::string folder = argParser.GetOption(Args::Options::Folder);
+  if (folder.empty()) {
+    throw std::invalid_argument("A pasta não pode estar em branco");
+  }
+  bool exist = std::filesystem::exists(folder);
+  // Funcionalidade do c++ 17 -> Filesystem, verificar se a pasta existe no pc. Note, vai funcionar para pastas da maquina virtual apenas.
+  if (!exist) {
+    std::cout << folder << std::endl;
+    throw std::invalid_argument("A pasta não existe");
+  }
+  // validar se o filtro é um string valida
+  const std::string filter = argParser.GetOption(Args::Options::Filter);
+  if (!filter.empty()) {
+    const std::string invalidCharacters = "\\/*\"?<>|"; // Escapar \ para construir esse tipo de string
+    if (filter.find_first_of(invalidCharacters) != std::string::npos) {
+      throw std::invalid_argument("O filtro não pode conter " + invalidCharacters);
+    }
+  }
 };
 
 int main(int argc, char *argv[]) {
@@ -42,8 +66,8 @@ int main(int argc, char *argv[]) {
   argParser.RegisterFlag(Args::Flags::Convert);
   argParser.RegisterFlag(Args::Flags::Resize);
   argParser.RegisterFlag(Args::Flags::Scale);
-  argParser.RegisterOption("folder");
-  argParser.RegisterOption("amount");
+  argParser.RegisterOption(Args::Options::Filter);
+  argParser.RegisterOption(Args::Options::Folder);
 
   argParser.Parse(argc, argv);
 

@@ -83,19 +83,51 @@ Unittests/CMakeFiles/TestArgumentParser.dir/TestArgumentParser.cpp.s: cmake_forc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TestArgumentParser.dir/TestArgumentParser.cpp.s"
 	cd /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/Unittests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/Unittests/TestArgumentParser.cpp -o CMakeFiles/TestArgumentParser.dir/TestArgumentParser.cpp.s
 
+Unittests/CMakeFiles/TestArgumentParser.dir/__/ArgumentParser.cpp.o: Unittests/CMakeFiles/TestArgumentParser.dir/flags.make
+Unittests/CMakeFiles/TestArgumentParser.dir/__/ArgumentParser.cpp.o: ../ArgumentParser.cpp
+Unittests/CMakeFiles/TestArgumentParser.dir/__/ArgumentParser.cpp.o: Unittests/CMakeFiles/TestArgumentParser.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Unittests/CMakeFiles/TestArgumentParser.dir/__/ArgumentParser.cpp.o"
+	cd /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/Unittests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Unittests/CMakeFiles/TestArgumentParser.dir/__/ArgumentParser.cpp.o -MF CMakeFiles/TestArgumentParser.dir/__/ArgumentParser.cpp.o.d -o CMakeFiles/TestArgumentParser.dir/__/ArgumentParser.cpp.o -c /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/ArgumentParser.cpp
+
+Unittests/CMakeFiles/TestArgumentParser.dir/__/ArgumentParser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TestArgumentParser.dir/__/ArgumentParser.cpp.i"
+	cd /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/Unittests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/ArgumentParser.cpp > CMakeFiles/TestArgumentParser.dir/__/ArgumentParser.cpp.i
+
+Unittests/CMakeFiles/TestArgumentParser.dir/__/ArgumentParser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TestArgumentParser.dir/__/ArgumentParser.cpp.s"
+	cd /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/Unittests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/ArgumentParser.cpp -o CMakeFiles/TestArgumentParser.dir/__/ArgumentParser.cpp.s
+
+Unittests/CMakeFiles/TestArgumentParser.dir/__/Utils.cpp.o: Unittests/CMakeFiles/TestArgumentParser.dir/flags.make
+Unittests/CMakeFiles/TestArgumentParser.dir/__/Utils.cpp.o: ../Utils.cpp
+Unittests/CMakeFiles/TestArgumentParser.dir/__/Utils.cpp.o: Unittests/CMakeFiles/TestArgumentParser.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Unittests/CMakeFiles/TestArgumentParser.dir/__/Utils.cpp.o"
+	cd /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/Unittests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Unittests/CMakeFiles/TestArgumentParser.dir/__/Utils.cpp.o -MF CMakeFiles/TestArgumentParser.dir/__/Utils.cpp.o.d -o CMakeFiles/TestArgumentParser.dir/__/Utils.cpp.o -c /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/Utils.cpp
+
+Unittests/CMakeFiles/TestArgumentParser.dir/__/Utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TestArgumentParser.dir/__/Utils.cpp.i"
+	cd /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/Unittests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/Utils.cpp > CMakeFiles/TestArgumentParser.dir/__/Utils.cpp.i
+
+Unittests/CMakeFiles/TestArgumentParser.dir/__/Utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TestArgumentParser.dir/__/Utils.cpp.s"
+	cd /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/Unittests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/Utils.cpp -o CMakeFiles/TestArgumentParser.dir/__/Utils.cpp.s
+
 # Object files for target TestArgumentParser
 TestArgumentParser_OBJECTS = \
-"CMakeFiles/TestArgumentParser.dir/TestArgumentParser.cpp.o"
+"CMakeFiles/TestArgumentParser.dir/TestArgumentParser.cpp.o" \
+"CMakeFiles/TestArgumentParser.dir/__/ArgumentParser.cpp.o" \
+"CMakeFiles/TestArgumentParser.dir/__/Utils.cpp.o"
 
 # External object files for target TestArgumentParser
 TestArgumentParser_EXTERNAL_OBJECTS =
 
 Unittests/TestArgumentParser: Unittests/CMakeFiles/TestArgumentParser.dir/TestArgumentParser.cpp.o
+Unittests/TestArgumentParser: Unittests/CMakeFiles/TestArgumentParser.dir/__/ArgumentParser.cpp.o
+Unittests/TestArgumentParser: Unittests/CMakeFiles/TestArgumentParser.dir/__/Utils.cpp.o
 Unittests/TestArgumentParser: Unittests/CMakeFiles/TestArgumentParser.dir/build.make
 Unittests/TestArgumentParser: lib/libgtest_main.a
 Unittests/TestArgumentParser: lib/libgtest.a
 Unittests/TestArgumentParser: Unittests/CMakeFiles/TestArgumentParser.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable TestArgumentParser"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable TestArgumentParser"
 	cd /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/Unittests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TestArgumentParser.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

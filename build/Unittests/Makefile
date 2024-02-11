@@ -199,6 +199,54 @@ TestArgumentParser.cpp.s:
 	cd /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build && $(MAKE) $(MAKESILENT) -f Unittests/CMakeFiles/TestArgumentParser.dir/build.make Unittests/CMakeFiles/TestArgumentParser.dir/TestArgumentParser.cpp.s
 .PHONY : TestArgumentParser.cpp.s
 
+__/ArgumentParser.o: __/ArgumentParser.cpp.o
+.PHONY : __/ArgumentParser.o
+
+# target to build an object file
+__/ArgumentParser.cpp.o:
+	cd /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build && $(MAKE) $(MAKESILENT) -f Unittests/CMakeFiles/TestArgumentParser.dir/build.make Unittests/CMakeFiles/TestArgumentParser.dir/__/ArgumentParser.cpp.o
+.PHONY : __/ArgumentParser.cpp.o
+
+__/ArgumentParser.i: __/ArgumentParser.cpp.i
+.PHONY : __/ArgumentParser.i
+
+# target to preprocess a source file
+__/ArgumentParser.cpp.i:
+	cd /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build && $(MAKE) $(MAKESILENT) -f Unittests/CMakeFiles/TestArgumentParser.dir/build.make Unittests/CMakeFiles/TestArgumentParser.dir/__/ArgumentParser.cpp.i
+.PHONY : __/ArgumentParser.cpp.i
+
+__/ArgumentParser.s: __/ArgumentParser.cpp.s
+.PHONY : __/ArgumentParser.s
+
+# target to generate assembly for a file
+__/ArgumentParser.cpp.s:
+	cd /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build && $(MAKE) $(MAKESILENT) -f Unittests/CMakeFiles/TestArgumentParser.dir/build.make Unittests/CMakeFiles/TestArgumentParser.dir/__/ArgumentParser.cpp.s
+.PHONY : __/ArgumentParser.cpp.s
+
+__/Utils.o: __/Utils.cpp.o
+.PHONY : __/Utils.o
+
+# target to build an object file
+__/Utils.cpp.o:
+	cd /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build && $(MAKE) $(MAKESILENT) -f Unittests/CMakeFiles/TestArgumentParser.dir/build.make Unittests/CMakeFiles/TestArgumentParser.dir/__/Utils.cpp.o
+.PHONY : __/Utils.cpp.o
+
+__/Utils.i: __/Utils.cpp.i
+.PHONY : __/Utils.i
+
+# target to preprocess a source file
+__/Utils.cpp.i:
+	cd /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build && $(MAKE) $(MAKESILENT) -f Unittests/CMakeFiles/TestArgumentParser.dir/build.make Unittests/CMakeFiles/TestArgumentParser.dir/__/Utils.cpp.i
+.PHONY : __/Utils.cpp.i
+
+__/Utils.s: __/Utils.cpp.s
+.PHONY : __/Utils.s
+
+# target to generate assembly for a file
+__/Utils.cpp.s:
+	cd /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build && $(MAKE) $(MAKESILENT) -f Unittests/CMakeFiles/TestArgumentParser.dir/build.make Unittests/CMakeFiles/TestArgumentParser.dir/__/Utils.cpp.s
+.PHONY : __/Utils.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -215,6 +263,12 @@ help:
 	@echo "... TestArgumentParser.o"
 	@echo "... TestArgumentParser.i"
 	@echo "... TestArgumentParser.s"
+	@echo "... __/ArgumentParser.o"
+	@echo "... __/ArgumentParser.i"
+	@echo "... __/ArgumentParser.s"
+	@echo "... __/Utils.o"
+	@echo "... __/Utils.i"
+	@echo "... __/Utils.s"
 .PHONY : help
 
 

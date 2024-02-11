@@ -11,3 +11,4 @@ list(FILTER SOURCES EXCLUDE REGEX "CMakeCXXCompilerId.cpp")
 add_executable(PhotoBatch ${SOURCES} ${HEADERS})
 
 add_subdirectory(Unittests)
+target_link_libraries(PhotoBatch -lgtest)

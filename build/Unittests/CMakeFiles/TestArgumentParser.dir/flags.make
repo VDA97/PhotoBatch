@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/_deps/googletest-src/googletest/include -isystem /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/_deps/googletest-src/googletest
+CXX_INCLUDES = -I/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch -isystem /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/_deps/googletest-src/googletest/include -isystem /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/_deps/googletest-src/googletest
 
 CXX_FLAGS = 
 

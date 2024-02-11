@@ -1,9 +1,16 @@
 #include "ArgumentParser.h"
 #include "Utils.h"
 
+bool ArgumentParser::IsFlagRegistered(const std::string &flag) const {
+  if (!flag.empty()) {
+    return m_Flags.count(flag) == 1;
+  }
+  return false;
+}
+
 void ArgumentParser::RegisterFlag(const std::string &flag) {
 
-  if (!flag.empty()) {
+  if (!flag.empty() && !Utils::HasWhiteSpace(flag)) {
     m_Flags[flag] = false;
   }
 }

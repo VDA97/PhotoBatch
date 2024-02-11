@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/PhotoBatch.dir/ArgumentParser.cpp.o CMakeFiles/PhotoBatch.dir/Utils.cpp.o CMakeFiles/PhotoBatch.dir/main.cpp.o -o PhotoBatch 

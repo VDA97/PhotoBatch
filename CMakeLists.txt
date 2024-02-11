@@ -9,3 +9,5 @@ list(FILTER SOURCES EXCLUDE REGEX "CMakeCXXCompilerId.cpp")
 
 # Add an executable target with the source files and header files
 add_executable(PhotoBatch ${SOURCES} ${HEADERS})
+
+add_subdirectory(Unittests)

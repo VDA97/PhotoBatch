@@ -156,7 +156,8 @@ Unittests/CMakeFiles/TestArgumentParser.dir/TestArgumentParser.cpp.o: \
  /usr/include/c++/12/bits/stl_map.h /usr/include/c++/12/tuple \
  /usr/include/c++/12/bits/uses_allocator.h \
  /usr/include/c++/12/bits/stl_multimap.h \
- /usr/include/c++/12/bits/erase_if.h \
+ /usr/include/c++/12/bits/erase_if.h /usr/include/c++/12/array \
+ /usr/include/c++/12/compare \
  /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/_deps/googletest-src/googletest/include/gtest/gtest.h \
  /usr/include/c++/12/cstddef /usr/include/c++/12/limits \
  /usr/include/c++/12/memory /usr/include/c++/12/bits/stl_uninitialized.h \
@@ -255,8 +256,8 @@ Unittests/CMakeFiles/TestArgumentParser.dir/TestArgumentParser.cpp.o: \
  /usr/include/c++/12/functional /usr/include/c++/12/bits/std_function.h \
  /usr/include/c++/12/unordered_map /usr/include/c++/12/bits/hashtable.h \
  /usr/include/c++/12/bits/hashtable_policy.h \
- /usr/include/c++/12/bits/unordered_map.h /usr/include/c++/12/array \
- /usr/include/c++/12/compare /usr/include/c++/12/bits/stl_algo.h \
+ /usr/include/c++/12/bits/unordered_map.h \
+ /usr/include/c++/12/bits/stl_algo.h \
  /usr/include/c++/12/bits/algorithmfwd.h \
  /usr/include/c++/12/bits/stl_heap.h \
  /usr/include/c++/12/bits/uniform_int_dist.h /usr/include/c++/12/utility \

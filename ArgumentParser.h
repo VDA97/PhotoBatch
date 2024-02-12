@@ -16,10 +16,11 @@
 class ArgumentParser {
 public:
   bool IsFlagRegistered(const std::string &flag) const;
+  bool IsOptionRegistered(const std::string &option) const;
   void RegisterFlag(const std::string &flag);
   void RegisterOption(const std::string &option);
   bool GetFlag(const std::string &flag) const;
-  void Parse(int argc, char *argv[]);
+  void Parse(int argc, const char *argv[]);
 
   const std::string &GetOption(const std::string &option) const;
 

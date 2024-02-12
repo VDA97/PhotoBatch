@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/PhotoBatch.dir/ArgumentParser.cpp.o CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o CMakeFiles/PhotoBatch.dir/Unittests/TestArgumentParser.cpp.o CMakeFiles/PhotoBatch.dir/Utils.cpp.o -o PhotoBatch  -lgtest 
+/usr/bin/c++ CMakeFiles/PhotoBatch.dir/ArgumentParser.cpp.o CMakeFiles/PhotoBatch.dir/Mode.cpp.o CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o CMakeFiles/PhotoBatch.dir/Unittests/TestArgumentParser.cpp.o CMakeFiles/PhotoBatch.dir/Utils.cpp.o -o PhotoBatch  -lgtest 

@@ -83,10 +83,24 @@ CMakeFiles/PhotoBatch.dir/ArgumentParser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhotoBatch.dir/ArgumentParser.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/ArgumentParser.cpp -o CMakeFiles/PhotoBatch.dir/ArgumentParser.cpp.s
 
+CMakeFiles/PhotoBatch.dir/Mode.cpp.o: CMakeFiles/PhotoBatch.dir/flags.make
+CMakeFiles/PhotoBatch.dir/Mode.cpp.o: ../Mode.cpp
+CMakeFiles/PhotoBatch.dir/Mode.cpp.o: CMakeFiles/PhotoBatch.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/PhotoBatch.dir/Mode.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PhotoBatch.dir/Mode.cpp.o -MF CMakeFiles/PhotoBatch.dir/Mode.cpp.o.d -o CMakeFiles/PhotoBatch.dir/Mode.cpp.o -c /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/Mode.cpp
+
+CMakeFiles/PhotoBatch.dir/Mode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PhotoBatch.dir/Mode.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/Mode.cpp > CMakeFiles/PhotoBatch.dir/Mode.cpp.i
+
+CMakeFiles/PhotoBatch.dir/Mode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PhotoBatch.dir/Mode.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/Mode.cpp -o CMakeFiles/PhotoBatch.dir/Mode.cpp.s
+
 CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o: CMakeFiles/PhotoBatch.dir/flags.make
 CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o: ../PhotoBatch.cpp
 CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o: CMakeFiles/PhotoBatch.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o -MF CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o.d -o CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o -c /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/PhotoBatch.cpp
 
 CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.i: cmake_force
@@ -100,7 +114,7 @@ CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.s: cmake_force
 CMakeFiles/PhotoBatch.dir/Unittests/TestArgumentParser.cpp.o: CMakeFiles/PhotoBatch.dir/flags.make
 CMakeFiles/PhotoBatch.dir/Unittests/TestArgumentParser.cpp.o: ../Unittests/TestArgumentParser.cpp
 CMakeFiles/PhotoBatch.dir/Unittests/TestArgumentParser.cpp.o: CMakeFiles/PhotoBatch.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PhotoBatch.dir/Unittests/TestArgumentParser.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/PhotoBatch.dir/Unittests/TestArgumentParser.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PhotoBatch.dir/Unittests/TestArgumentParser.cpp.o -MF CMakeFiles/PhotoBatch.dir/Unittests/TestArgumentParser.cpp.o.d -o CMakeFiles/PhotoBatch.dir/Unittests/TestArgumentParser.cpp.o -c /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/Unittests/TestArgumentParser.cpp
 
 CMakeFiles/PhotoBatch.dir/Unittests/TestArgumentParser.cpp.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/PhotoBatch.dir/Unittests/TestArgumentParser.cpp.s: cmake_force
 CMakeFiles/PhotoBatch.dir/Utils.cpp.o: CMakeFiles/PhotoBatch.dir/flags.make
 CMakeFiles/PhotoBatch.dir/Utils.cpp.o: ../Utils.cpp
 CMakeFiles/PhotoBatch.dir/Utils.cpp.o: CMakeFiles/PhotoBatch.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/PhotoBatch.dir/Utils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/PhotoBatch.dir/Utils.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PhotoBatch.dir/Utils.cpp.o -MF CMakeFiles/PhotoBatch.dir/Utils.cpp.o.d -o CMakeFiles/PhotoBatch.dir/Utils.cpp.o -c /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/Utils.cpp
 
 CMakeFiles/PhotoBatch.dir/Utils.cpp.i: cmake_force
@@ -128,6 +142,7 @@ CMakeFiles/PhotoBatch.dir/Utils.cpp.s: cmake_force
 # Object files for target PhotoBatch
 PhotoBatch_OBJECTS = \
 "CMakeFiles/PhotoBatch.dir/ArgumentParser.cpp.o" \
+"CMakeFiles/PhotoBatch.dir/Mode.cpp.o" \
 "CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o" \
 "CMakeFiles/PhotoBatch.dir/Unittests/TestArgumentParser.cpp.o" \
 "CMakeFiles/PhotoBatch.dir/Utils.cpp.o"
@@ -136,12 +151,13 @@ PhotoBatch_OBJECTS = \
 PhotoBatch_EXTERNAL_OBJECTS =
 
 PhotoBatch: CMakeFiles/PhotoBatch.dir/ArgumentParser.cpp.o
+PhotoBatch: CMakeFiles/PhotoBatch.dir/Mode.cpp.o
 PhotoBatch: CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o
 PhotoBatch: CMakeFiles/PhotoBatch.dir/Unittests/TestArgumentParser.cpp.o
 PhotoBatch: CMakeFiles/PhotoBatch.dir/Utils.cpp.o
 PhotoBatch: CMakeFiles/PhotoBatch.dir/build.make
 PhotoBatch: CMakeFiles/PhotoBatch.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable PhotoBatch"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable PhotoBatch"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PhotoBatch.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/PhotoBatch.dir/ArgumentParser.cpp.o"
   "CMakeFiles/PhotoBatch.dir/ArgumentParser.cpp.o.d"
+  "CMakeFiles/PhotoBatch.dir/Mode.cpp.o"
+  "CMakeFiles/PhotoBatch.dir/Mode.cpp.o.d"
   "CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o"
   "CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o.d"
   "CMakeFiles/PhotoBatch.dir/Unittests/TestArgumentParser.cpp.o"

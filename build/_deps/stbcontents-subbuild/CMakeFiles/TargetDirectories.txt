@@ -1,0 +1,3 @@
+/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/_deps/stbcontents-subbuild/CMakeFiles/stbcontents-populate.dir
+/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/_deps/stbcontents-subbuild/CMakeFiles/edit_cache.dir
+/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/_deps/stbcontents-subbuild/CMakeFiles/rebuild_cache.dir

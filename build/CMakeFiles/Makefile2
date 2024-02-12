@@ -65,16 +65,34 @@ CMAKE_BINARY_DIR = /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build
 # The main recursive "all" target.
 all: CMakeFiles/PhotoBatch.dir/all
 all: Unittests/all
+all: External/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: Unittests/preinstall
+preinstall: External/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/PhotoBatch.dir/clean
 clean: Unittests/clean
+clean: External/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory External
+
+# Recursive "all" directory target.
+External/all:
+.PHONY : External/all
+
+# Recursive "preinstall" directory target.
+External/preinstall:
+.PHONY : External/preinstall
+
+# Recursive "clean" directory target.
+External/clean:
+.PHONY : External/clean
 
 #=============================================================================
 # Directory level rules for directory Unittests
@@ -151,12 +169,12 @@ _deps/googletest-build/googletest/clean: _deps/googletest-build/googletest/CMake
 CMakeFiles/PhotoBatch.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhotoBatch.dir/build.make CMakeFiles/PhotoBatch.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhotoBatch.dir/build.make CMakeFiles/PhotoBatch.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target PhotoBatch"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target PhotoBatch"
 .PHONY : CMakeFiles/PhotoBatch.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/PhotoBatch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/PhotoBatch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/CMakeFiles 0
 .PHONY : CMakeFiles/PhotoBatch.dir/rule
@@ -178,7 +196,7 @@ Unittests/CMakeFiles/TestArgumentParser.dir/all: _deps/googletest-build/googlete
 Unittests/CMakeFiles/TestArgumentParser.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f Unittests/CMakeFiles/TestArgumentParser.dir/build.make Unittests/CMakeFiles/TestArgumentParser.dir/depend
 	$(MAKE) $(MAKESILENT) -f Unittests/CMakeFiles/TestArgumentParser.dir/build.make Unittests/CMakeFiles/TestArgumentParser.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/CMakeFiles --progress-num=7,8,9,10 "Built target TestArgumentParser"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/CMakeFiles --progress-num=8,9,10,11 "Built target TestArgumentParser"
 .PHONY : Unittests/CMakeFiles/TestArgumentParser.dir/all
 
 # Build rule for subdir invocation for target.
@@ -204,7 +222,7 @@ Unittests/CMakeFiles/TestArgumentParser.dir/clean:
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/CMakeFiles --progress-num=11,12 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/CMakeFiles --progress-num=12,13 "Built target gmock"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -231,7 +249,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletes
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/CMakeFiles --progress-num=13,14 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/CMakeFiles --progress-num=14,15 "Built target gmock_main"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -257,7 +275,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/CMakeFiles --progress-num=15,16 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/CMakeFiles --progress-num=16,17 "Built target gtest"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -283,7 +301,7 @@ _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/CMakeFiles --progress-num=17,18 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/CMakeFiles --progress-num=18,19 "Built target gtest_main"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.

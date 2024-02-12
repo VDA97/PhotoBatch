@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/_deps/stbcontents-src
 
 CXX_FLAGS = 
 

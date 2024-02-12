@@ -1,9 +1,11 @@
 #include "Mode.h"
+#include "RenameMode.h"
 #include <iostream>
 #include "ArgumentParser.h"
 #include <algorithm> //It is need for using std::count.
 #include <array>
 #include <filesystem> //substitui o <dirent.h> usando no linux para verificar pastas do pc local
+#include <chrono>
 
 const std::string &Mode::GetFilter() const
 {
@@ -17,24 +19,15 @@ const std::string &Mode::GetFolder() const
 
 void Mode::Run()
 {
+    using ClockT = std::chrono::high_resolution_clock;
     // This method will be used to check how long the operation took.
+    ClockT::time_point startTime = ClockT::now();
     RunImpl(); // Read time in this point //Calculate the difference
-}
+    ClockT::time_point endTime = ClockT::now();
+    ClockT::duration elapsedTime = endTime - startTime;
+    std::chrono::milliseconds elapsedTimeMs = std::chrono::duration_cast<std::chrono::milliseconds>(elapsedTime);
 
-RenameMode::RenameMode(const std::string &filter, const std::string &folder, const std::string &prefix, int startNumber)
-    : Mode(filter, folder), m_Prefix(prefix), m_StartNumber(startNumber)
-{
-}
-
-const std::string &RenameMode::GetModeName() const
-{
-    static const std::string RenameModeName = "[Renomear]: ";
-    return RenameModeName;
-}
-
-void RenameMode::RunImpl()
-{
-    std::cout << GetModeName() << "is running" << std::endl;
+    std::cout << GetModeName() << "Process finished in : " << elapsedTimeMs.count() << "ms" << std::endl;
 }
 
 const std::string &GetInvalidChars()
@@ -164,6 +157,8 @@ std::unique_ptr<Mode> CreateMode(const ArgumentParser &argParser)
         {
             throw std::invalid_argument("Prefixo não pode estar em branco e não pode conter os caracteres: " + GetInvalidChars());
         }
+
+        return std::make_unique<RenameMode>(filter, folder, prefix, startNumber);
     }
 
     if (bConvertMode)

@@ -172,7 +172,9 @@ CMakeFiles/PhotoBatch.dir/PhotoBatch.cpp.o: \
  /usr/include/c++/12/bits/atomic_lockfree_defines.h \
  /usr/include/c++/12/backward/auto_ptr.h \
  /usr/include/c++/12/pstl/glue_memory_defs.h \
- /usr/include/c++/12/pstl/execution_defs.h /usr/include/c++/12/iomanip \
+ /usr/include/c++/12/pstl/execution_defs.h \
+ /home/victoralmeida/FunctionalProgrammingCpp/PhotoBatch/build/_deps/stbcontents-src/stb_image.h \
+ /usr/include/c++/12/stdlib.h /usr/include/c++/12/iomanip \
  /usr/include/c++/12/locale \
  /usr/include/c++/12/bits/locale_facets_nonio.h /usr/include/c++/12/ctime \
  /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h \

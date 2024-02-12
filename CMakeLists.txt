@@ -9,6 +9,10 @@ list(FILTER SOURCES EXCLUDE REGEX "CMakeCXXCompilerId.cpp")
 
 # Add an executable target with the source files and header files
 add_executable(PhotoBatch ${SOURCES} ${HEADERS})
+set(FETCHCONTENT_QUIET OFF CACHE BOOL "Desabilita o modo quiet to FetchContent" FORCE)
+include(FetchContent)
 
 add_subdirectory(Unittests)
-target_link_libraries(PhotoBatch -lgtest)
+add_subdirectory(External)
+
+target_link_libraries(PhotoBatch PRIVATE stb -lgtest)

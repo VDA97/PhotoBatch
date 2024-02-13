@@ -1,0 +1,3 @@
+C:/Users/ADM/source/repos/PhotoBatch/out/build/x64-Debug/_deps/stbcontents-subbuild/CMakeFiles/stbcontents-populate.dir
+C:/Users/ADM/source/repos/PhotoBatch/out/build/x64-Debug/_deps/stbcontents-subbuild/CMakeFiles/edit_cache.dir
+C:/Users/ADM/source/repos/PhotoBatch/out/build/x64-Debug/_deps/stbcontents-subbuild/CMakeFiles/rebuild_cache.dir

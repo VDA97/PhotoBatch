@@ -1,5 +1,6 @@
 #include "Mode.h"
 #include "RenameMode.h"
+#include "ConvertMode.h"
 #include <iostream>
 #include "ArgumentParser.h"
 #include <algorithm> //It is need for using std::count.
@@ -177,6 +178,13 @@ std::unique_ptr<Mode> CreateMode(const ArgumentParser &argParser)
         {
             throw std::invalid_argument("From e to devem ser diferentes");
         }
+
+        const std::map<std::string, ConvertMode::Format> convertOptionsMap = {
+            {"jpg", ConvertMode::Format::JPG},
+            {"png", ConvertMode::Format::PNG}
+        };
+
+        return std::make_unique<ConvertMode>(filter, folder, convertOptionsMap.at(from), convertOptionsMap.at(to));
     }
 
     return nullptr;

@@ -22,31 +22,9 @@ void RenameMode::RunImpl()
     std::cout << GetModeName() << "Prefix      : " << m_Prefix << std::endl;
     std::cout << GetModeName() << "StartNumber : " << m_StartNumber << std::endl;
 
-    std::vector<std::filesystem::path> filesToRename;
-    int numSkippedFiles = 0;
-
-    // collect all files that matchs with specified filter
-    for (const std::filesystem::directory_entry &entry : std::filesystem::directory_iterator(GetFolder()))
-    {
-        //.empty() return true if string is empty. False if not empty
-        const bool bIsFile = std::filesystem::is_regular_file(entry.path());                                             // True if its a file, false if its a folder or a shortcut
-        const bool bMatchFilter = GetFilter().empty() || (entry.path().string().find(GetFilter()) != std::string::npos); // return the files according with filter
-        // Exercise -> Change bMatchFilter to filter .JPG (uppercase)
-        if (bIsFile && bMatchFilter)
-        {
-            filesToRename.push_back(entry.path());
-        }
-        else
-        {
-            numSkippedFiles++;
-        }
-    }
-    std::cout << GetModeName() << "Number of files found: " << filesToRename.size() << std::endl;
-    std::cout << GetModeName() << "Number of files ignored: " << numSkippedFiles << std::endl;
-
     int currentNumber = m_StartNumber;
     // Start file rename process -> e.g AbsoluteZero.png -> PrefixN.png
-    for (const std::filesystem::path &filepath : filesToRename)
+    for (const std::filesystem::path &filepath : GetFiles())
     {
         const std::filesystem::path extension = filepath.extension();
         const std::string newFileName = m_Prefix + std::to_string(currentNumber) + extension.string();

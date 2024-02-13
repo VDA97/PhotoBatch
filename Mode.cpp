@@ -31,6 +31,32 @@ void Mode::Run()
     std::cout << GetModeName() << "Process finished in : " << elapsedTimeMs.count() << "ms" << std::endl;
 }
 
+std::vector<std::filesystem::path> Mode::GetFiles(const std::filesystem::path& extension)const {
+    std::vector<std::filesystem::path> files;
+    int numSkippedFiles = 0;
+
+    // collect all files that matchs with specified filter
+    for (const std::filesystem::directory_entry& entry : std::filesystem::directory_iterator(GetFolder()))
+    {
+        //.empty() return true if string is empty. False if not empty
+        const bool bIsFile = std::filesystem::is_regular_file(entry.path());                                             // True if its a file, false if its a folder or a shortcut
+        const bool bMatchFilter = GetFilter().empty() || (entry.path().string().find(GetFilter()) != std::string::npos); // return the files according with filter
+        const bool bMatchExtension = extension.empty() || (entry.path().extension() == extension);
+        // Exercise -> Change bMatchFilter to filter .JPG (uppercase)
+        if (bIsFile && bMatchFilter && bMatchExtension)
+        {
+            files.push_back(entry.path());
+        }
+        else
+        {
+            numSkippedFiles++;
+        }
+    }
+    std::cout << GetModeName() << "Number of files found: " << files.size() << std::endl;
+    std::cout << GetModeName() << "Number of files ignored: " << numSkippedFiles << std::endl;
+    return files;
+}
+
 const std::string &GetInvalidChars()
 {
     static const std::string invalidCharacters = "\\/*\"?<>|"; // Escapar \ para construir esse tipo de string

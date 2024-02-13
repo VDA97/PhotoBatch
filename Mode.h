@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 #include <memory>
+#include <filesystem>
+#include <vector>
 
 class Mode
 {
@@ -15,6 +17,8 @@ public:
 
 protected:
     virtual void RunImpl() = 0; // The function, which will heritage from interface, should implement these virtual functions std::string m_Filter;
+    std::vector<std::filesystem::path>GetFiles(const std::filesystem::path & extension = "") const;
+
 private:
     std::string m_Filter;
     std::string m_Folder;

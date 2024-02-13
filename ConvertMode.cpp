@@ -1,20 +1,27 @@
 #include "ConvertMode.h"
 #include <iostream>
+#define	STB_IMAGE_IMPLEMENTATION 
+#include <stb_image.h>
+#define STB_IMAGE_WRITE_IMPLEMENTATION
+#include <stb_image_write.h>
 
-std::ostream& operator <<(std::ostream& out, ConvertMode::Format format)
-{
+std::string ToString(ConvertMode::Format format) {
 	switch (format)
 	{
 	case ConvertMode::Format::JPG:
-		out << "jpg";
-		break;
+		return "jpg";
 	case ConvertMode::Format::PNG:
-		out << "png";
-		break;
+		return "png";
 	default:
 		break;
 	}
 
+	return "";
+}
+
+std::ostream& operator <<(std::ostream& out, ConvertMode::Format format)
+{
+	out << ToString(format);
 	return out;
 }
 
@@ -40,5 +47,11 @@ void ConvertMode::RunImpl() {
 	std::cout << GetModeName() << "Filter	:	" << GetFilter() << std::endl;	
 	std::cout << GetModeName() << "From		:	" << m_FromFormat << std::endl;
 	std::cout << GetModeName() << "To		:	" << m_ToFormat << std::endl;
+
+	const std::filesystem::path fromExtension = "." + ToString(m_FromFormat);
+	
+	for (const std::filesystem::path& filepath : GetFiles(fromExtension)) {
+		std::cout << GetModeName() << filepath << std::endl;
+	}
 
 }

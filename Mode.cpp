@@ -1,6 +1,7 @@
 #include "Mode.h"
 #include "RenameMode.h"
 #include "ConvertMode.h"
+#include "ResizeMode.h"
 #include <iostream>
 #include "ArgumentParser.h"
 #include <algorithm> //It is need for using std::count.
@@ -140,6 +141,8 @@ std::unique_ptr<Mode> CreateMode(const ArgumentParser &argParser)
         {
             throw std::invalid_argument("Filter não pode estar em branco no modo Resize");
         }
+
+        return std::make_unique<ResizeMode>(filter, folder, width, height);
     }
 
     if (bScaleMode)

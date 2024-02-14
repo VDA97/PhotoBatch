@@ -22,6 +22,7 @@ int main(int argc, const char *argv[])
   argParser.RegisterOption(Args::Options::Folder);
   argParser.RegisterOption(Args::Options::Filter);
   argParser.RegisterOption(Args::Options::Height);
+  argParser.RegisterOption(Args::Options::Width);
   argParser.RegisterOption(Args::Options::Amount);
   argParser.RegisterOption(Args::Options::Prefix);
   argParser.RegisterOption(Args::Options::StartNumber);

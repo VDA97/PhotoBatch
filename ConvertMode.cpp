@@ -5,6 +5,7 @@
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include <stb_image_write.h>
 
+
 std::string ToString(ConvertMode::Format format) {
 	switch (format)
 	{
@@ -64,24 +65,21 @@ void ConvertMode::RunImpl() {
 			std::filesystem::path destFilePath = filepath;
 			destFilePath.replace_extension(ToString(m_ToFormat));
 
-			int writeResult = 0;
+			int writeResult = 1;
 			switch (m_ToFormat)
 			{
 			case ConvertMode::Format::JPG:
 				std::cout << GetModeName() << "IsJpg ?" << filepath << std::endl;
 				writeResult = stbi_write_jpg(destFilePath.string().c_str(), width, height, numComp, data, 50);//Las parameters is regarding jpg quality. Could be a global variable to be defined by user. Todo
-			//	std::cout << "Ending for" << std::endl;
 				break;
 			case ConvertMode::Format::PNG:
 				std::cout << GetModeName() << "IsPngProblem ?" << filepath << std::endl;
 				writeResult = stbi_write_png(destFilePath.string().c_str(), width, height, numComp, data, 0);
-			//	std::cout << "Ending for" << std::endl;
 				break;
 			default:
 				break;
 			}
 
-			//writeResult = 1;
 			if (writeResult == 0) {
 				std::cout << GetModeName() << "Erro ao converter" << filepath << std::endl;
 			}
@@ -90,7 +88,6 @@ void ConvertMode::RunImpl() {
 		else {
 			std::cout << GetModeName() << "Erro ao carregar" << filepath << std::endl;
 		}
-		std::cout << "Ending for" << std::endl;
 	}
 
 }

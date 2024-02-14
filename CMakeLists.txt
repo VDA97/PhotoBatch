@@ -14,7 +14,10 @@ add_executable(PhotoBatch
 	"RenameMode.h"
 	"RenameMode.cpp"
 	"ConvertMode.h"
-	"ConvertMode.cpp")
+	"ConvertMode.cpp" 
+	"ResizeMode.h"
+	"ResizeMode.cpp"
+)
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET PhotoBatch PROPERTY CXX_STANDARD 20)
